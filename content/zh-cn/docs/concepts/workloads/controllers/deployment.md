@@ -2114,7 +2114,7 @@ rounding down. The value cannot be 0 if `.spec.strategy.rollingUpdate.maxSurge` 
 -->
 `.spec.strategy.rollingUpdate.maxUnavailable` 是一个可选字段，用来指定
 更新过程中不可用的 Pod 的个数上限。该值可以是绝对数字（例如，5），也可以是所需
-Pod 的百分比（例如，10%）。百分比值会转换成绝对数并去除小数部分。
+Pod 的百分比（例如，10%）。百分比值会通过向下取整转为绝对数。
 如果 `.spec.strategy.rollingUpdate.maxSurge` 为 0，则此值不能为 0。
 默认值为 25%。
 
